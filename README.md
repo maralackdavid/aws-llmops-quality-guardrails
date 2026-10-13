@@ -15,7 +15,49 @@
 
 ---
 
-## 1. CPMAI 6-Phase Project Lifecycle & Strategic Alignment
+## 1. Strategic Alignment & Solution Selection
+
+### 1.1 Probabilistic vs. Deterministic Task Filtering (The 95% Rule)
+Before committing enterprise capital, every observability requirement is evaluated against structural task characteristics:
+* **Predictability**: Evaluating semantic output quality requires probabilistic judge models (LLM-as-a-Judge / SageMaker Model Evaluation). However, CI/CD pipeline triggers, latency threshold assertions, and build aborts belong strictly in **100% deterministic automation**.
+* **The 95% Rule**: If deterministic rules cover 95% of pipeline assertions (e.g., latency thresholds, JSON schema validation, HTTP error codes), build deterministic gates. Probabilistic LLM judges are reserved strictly for semantic faithfulness, citation grounding, and hallucination scoring.
+
+### 1.2 3-Year Build vs. Buy vs. Partner TCO Model
+
+| Cost Element | Option A: Build In-House | Option B: Buy Off-the-Shelf | Option C: Partner (Recommended) |
+| :--- | :--- | :--- | :--- |
+| **Upfront / Co-Dev Cost** | $1,100,000 | $180,000 | $400,000 |
+| **Annual Operating Opex (3 Yrs)** | $450,000 ($150K/yr) | $800,000 ($267K/yr) | $380,000 ($126K/yr) |
+| **Hidden Egress & Custom Metric Fees** | $0 | $440,000 | $0 (Native AWS Serverless) |
+| **Total 3-Year TCO** | **$1,550,000** | **$1,420,000** (Adjusted) | **$780,000** |
+| **Time-to-Market** | 12 Months | 2 Months | 3 Months (Meets Target) |
+| **Enterprise IP Ownership** | 100% Owned | Vendor Owned | **100% Contractually Retained** |
+
+### 1.3 Active Portfolio Governance
+LLMOps observability initiatives are managed through evidence-backed operational classifications:
+* **Scale**: Proven risk avoidance, high developer adoption, strong quality flywheel.
+* **Pause**: Temporarily suspended with strict 30/60-day condition criteria (e.g., awaiting trace schema approval or SRE re-alignment).
+* **Terminate**: Flawed evaluation frameworks stopped immediately, with remaining capital redeployed to high-impact initiatives.
+
+---
+
+## 2. Value Demonstration & Financial Governance
+
+### 2.1 Executive Stakeholder KPI Alignment Matrix
+
+| Executive Role | Key Performance Indicators (KPIs) | Strategic Focus & Value Deliverable |
+| :--- | :--- | :--- |
+| **CFO** | Annual Risk Avoidance ($1.0M/yr Net), 2-Yr ROI (267%), Payback Period (~6.5 Mos) | Capital protection, zero bad-deployment rollback losses, financial return |
+| **COO / SRE** | P95 Response Latency (< 1.50s), TTFT, Trace Coverage (100%), Incident MTTR | System reliability, distributed observability, automated incident triage |
+| **CIO** | Citation Accuracy (96.1%), Hallucination Rate (2.3%), CI/CD Regression Blocking | Production deployment reliability, zero-trust quality gating, tech debt reduction |
+| **CHRO / Legal** | Compliance Alignment, Responsible AI Auditability, Hallucination Reduction | Enterprise risk mitigation, regulatory compliance, brand protection |
+
+### 2.2 Comprehensive Financial ROI Equation
+
+$$\text{Net Annual Benefit} = (\text{Direct Risk Avoidance} [\$650\text{K}] + \text{Indirect Gains} [\$300\text{K}] + \text{Productivity Gains} [\$195\text{K}]) - \text{Operating Opex} [\$145\text{K}] = \mathbf{\$1,000,000/\text{year}}$$
+
+---
+## 3. CPMAI 6-Phase Project Lifecycle & Strategic Alignment
 
 Execution follows the **Cognitive Project Management for AI (CPMAI)** methodology, embedding Module 4 strategy and Module 5 value governance into each phase gate:
 
@@ -75,49 +117,6 @@ graph TD
 * **CPMAI Objective**: Deploy into production, route SNS alarms, and execute daily automated drift detection against production traffic samples.
 * **Transition Strategy**: Execute a **Phased Rollout by Microservice** with automated build abort triggers to prevent flawed models from reaching production.
 * **Gate 4 Milestone**: Active Portfolio Governance classification (*Scale*, *Pause*, or *Terminate*).
-
----
-
-## 2. Strategic Alignment & Solution Selection
-
-### 2.1 Probabilistic vs. Deterministic Task Filtering (The 95% Rule)
-Before committing enterprise capital, every observability requirement is evaluated against structural task characteristics:
-* **Predictability**: Evaluating semantic output quality requires probabilistic judge models (LLM-as-a-Judge / SageMaker Model Evaluation). However, CI/CD pipeline triggers, latency threshold assertions, and build aborts belong strictly in **100% deterministic automation**.
-* **The 95% Rule**: If deterministic rules cover 95% of pipeline assertions (e.g., latency thresholds, JSON schema validation, HTTP error codes), build deterministic gates. Probabilistic LLM judges are reserved strictly for semantic faithfulness, citation grounding, and hallucination scoring.
-
-### 2.2 3-Year Build vs. Buy vs. Partner TCO Model
-
-| Cost Element | Option A: Build In-House | Option B: Buy Off-the-Shelf | Option C: Partner (Recommended) |
-| :--- | :--- | :--- | :--- |
-| **Upfront / Co-Dev Cost** | $1,100,000 | $180,000 | $400,000 |
-| **Annual Operating Opex (3 Yrs)** | $450,000 ($150K/yr) | $800,000 ($267K/yr) | $380,000 ($126K/yr) |
-| **Hidden Egress & Custom Metric Fees** | $0 | $440,000 | $0 (Native AWS Serverless) |
-| **Total 3-Year TCO** | **$1,550,000** | **$1,420,000** (Adjusted) | **$780,000** |
-| **Time-to-Market** | 12 Months | 2 Months | 3 Months (Meets Target) |
-| **Enterprise IP Ownership** | 100% Owned | Vendor Owned | **100% Contractually Retained** |
-
-### 2.3 Active Portfolio Governance
-LLMOps observability initiatives are managed through evidence-backed operational classifications:
-* **Scale**: Proven risk avoidance, high developer adoption, strong quality flywheel.
-* **Pause**: Temporarily suspended with strict 30/60-day condition criteria (e.g., awaiting trace schema approval or SRE re-alignment).
-* **Terminate**: Flawed evaluation frameworks stopped immediately, with remaining capital redeployed to high-impact initiatives.
-
----
-
-## 3. Value Demonstration & Financial Governance
-
-### 3.1 Executive Stakeholder KPI Alignment Matrix
-
-| Executive Role | Key Performance Indicators (KPIs) | Strategic Focus & Value Deliverable |
-| :--- | :--- | :--- |
-| **CFO** | Annual Risk Avoidance ($1.0M/yr Net), 2-Yr ROI (267%), Payback Period (~6.5 Mos) | Capital protection, zero bad-deployment rollback losses, financial return |
-| **COO / SRE** | P95 Response Latency (< 1.50s), TTFT, Trace Coverage (100%), Incident MTTR | System reliability, distributed observability, automated incident triage |
-| **CIO** | Citation Accuracy (96.1%), Hallucination Rate (2.3%), CI/CD Regression Blocking | Production deployment reliability, zero-trust quality gating, tech debt reduction |
-| **CHRO / Legal** | Compliance Alignment, Responsible AI Auditability, Hallucination Reduction | Enterprise risk mitigation, regulatory compliance, brand protection |
-
-### 3.2 Comprehensive Financial ROI Equation
-
-$$\text{Net Annual Benefit} = (\text{Direct Risk Avoidance} [\$650\text{K}] + \text{Indirect Gains} [\$300\text{K}] + \text{Productivity Gains} [\$195\text{K}]) - \text{Operating Opex} [\$145\text{K}] = \mathbf{\$1,000,000/\text{year}}$$
 
 ---
 
