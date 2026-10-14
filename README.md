@@ -1,6 +1,6 @@
 # Automated LLMOps Telemetry & Quality Guardrails (Enterprise Observability System)
 > **Enterprise LLMOps Observability Blueprint**: In-Pipeline Quality Gating, AWS X-Ray Distributed Tracing, and Financial Risk Governance.
-
+---
 > **Prototype disclaimer:** Independent AWS lab-based production-grade AI proof-of-concepts — no client engagements. All business-value figures are *modeled* at enterprise scale, not measured at a client. Benchmarks below are simulated prototype evaluation results.
 ---
 
